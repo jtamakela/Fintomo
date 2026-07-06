@@ -1,0 +1,14 @@
+(
+  AUTHLASTNAME(Kuva) OR AUTHLASTNAME(Miettinen) OR AUTHLASTNAME(Hannula) OR
+  AUTHLASTNAME(Parkkonen) OR AUTHLASTNAME(Suhonen) OR AUTHLASTNAME("Mäkelä JTA") OR
+  AUTHLASTNAME(Finnilä) OR AUTHLASTNAME(Saarakkala) OR AUTHLASTNAME(Hyttinen) OR
+  AUTHLASTNAME(Hyväluoma) OR AUTHLASTNAME(Jolis) OR AUTHLASTNAME(Corfe) OR
+  AUTHLASTNAME("Di-Poi") OR AUTHLASTNAME(Töyräs) OR AUTHLASTNAME(Korhonen) OR
+  AUTHLASTNAME(Reijonen) OR AUTHLASTNAME(Virkajärvi) OR AUTHLASTNAME("Siitari-Kauppi")
+)
+AND
+(
+  TITLE("computed tomography" OR microCT OR "micro-CT" OR tomograph*)
+  OR
+  AUTHKEY("computed tomography" OR microCT OR "micro-CT" OR tomograph*)
+)
