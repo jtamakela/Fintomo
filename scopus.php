@@ -1,29 +1,13 @@
 <?php
 
 $cacheFile = __DIR__ . "/scopus_cache.html";
-$cacheTime = 24 * 60 * 60; // 24 hours
-
-// Use cache if it exists and is less than 24 h old, or if query has been updated
 $queryFile = __DIR__ . "/scopus_query.txt";
 
-
-$cacheNeedsUpdate =
-    !file_exists($cacheFile) ||
-    filemtime($cacheFile) < filemtime($queryFile) ||
-    (time() - filemtime($cacheFile) > $cacheTime);
-
-if (!$cacheNeedsUpdate) {
-    readfile($cacheFile);
-    exit;
-}
-
-# $apiKey = trim(file_get_contents(__DIR__ . "/scopus_key.txt")); // Not used in Git
 $apiKey = getenv("SCOPUS_KEY");
 
 if (!$apiKey) {
     die("SCOPUS_KEY not found.");
 }
-
 
 $query = trim(file_get_contents($queryFile));
 
