@@ -1,4 +1,12 @@
-<iframe 
+<div id="publications"></div>
+
+<script>
+fetch("scopus_cache.html")
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById("publications").innerHTML = html;
+  });
+</script><iframe 
   src="scopus_cache.html"
   style="width:100%; height:1200px; border:none;">
 </iframe>
