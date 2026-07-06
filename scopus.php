@@ -43,6 +43,15 @@ $entries = $data["search-results"]["entry"] ?? [];
 ob_start();
 
 echo "<h2>Latest FinTomo-related Scopus publications</h2>";
+
+date_default_timezone_set("Europe/Helsinki");
+
+echo "<p style='font-size:0.9em;color:#666;'>
+Generated automatically from Scopus on "
+   . date("Y-m-d H:i")
+   . " (Finnish time).
+</p>";
+
 echo "<ol>";
 
 foreach ($entries as $entry) {
