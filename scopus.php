@@ -11,6 +11,9 @@ if (!$apiKey) {
 
 $query = trim(file_get_contents($queryFile));
 
+$scopusSearchUrl = "https://www.scopus.com/results/results.uri?sort=plf-f&src=s&st1="
+                 . urlencode($query);
+
 $url = "https://api.elsevier.com/content/search/scopus?"
      . "query=" . urlencode($query)
      . "&count=10"
@@ -48,8 +51,14 @@ date_default_timezone_set("Europe/Helsinki");
 
 echo "<p style='font-size:0.9em;color:#666;'>
 Generated automatically from Scopus on "
-   . date("Y-m-d H:i")
+date("j M Y, H:i")
    . " (Finnish time).
+</p>";
+
+echo "<p style='font-size:0.9em;'>
+<a href='" . htmlspecialchars($scopusSearchUrl) . "' target='_blank' rel='noopener'>
+View all matching results in Scopus
+</a>
 </p>";
 
 echo "<ol>";
