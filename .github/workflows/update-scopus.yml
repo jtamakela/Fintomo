@@ -22,7 +22,7 @@ jobs:
       - name: Update cache
         env:
           SCOPUS_API_KEY: ${{ secrets.SCOPUS_KEY }}
-        run: php update_scopus_cache.php
+        run: php scopus.php
 
       - name: Commit changes
         run: |
