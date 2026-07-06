@@ -11,7 +11,7 @@ if (!$apiKey) {
 
 $query = trim(file_get_contents($queryFile));
 
-$scopusSearchUrl = "https://www.scopus.com/results/results.uri?sort=plf-f&src=s&st1="
+$scopusSearchUrl = "https://www.scopus.com/results/results.uri?src=s&s="
                  . urlencode($query);
 
 $url = "https://api.elsevier.com/content/search/scopus?"
