@@ -1,4 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FinTomo</title>
+</head>
+<body>
+
+<h1>Finnish X-ray Tomography Research Infrastructure</h1>
+
 <div id="publications"></div>
+
+<script>
+fetch("scopus_cache.html")
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById("publications").innerHTML = html;
+  });
+</script>
+
+</body>
+</html><div id="publications"></div>
 
 <script>
 fetch("scopus_cache.html")
