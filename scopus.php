@@ -51,7 +51,7 @@ date_default_timezone_set("Europe/Helsinki");
 
 echo "<p style='font-size:0.9em;color:#666;'>
 Generated automatically from Scopus on "
-date("j M Y, H:i")
+   . date("j M Y, H:i")
    . " (Finnish time).
 </p>";
 
