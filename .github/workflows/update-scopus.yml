@@ -21,7 +21,7 @@ jobs:
 
       - name: Update cache
         env:
-          SCOPUS_API_KEY: ${{ secrets.SCOPUS_API_KEY }}
+          SCOPUS_API_KEY: ${{ secrets.SCOPUS_KEY }}
         run: php update_scopus_cache.php
 
       - name: Commit changes
